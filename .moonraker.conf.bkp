@@ -47,16 +47,6 @@ path = ~/mainsail-config
 origin = https://github.com/mainsail-crew/mainsail-config.git
 managed_services = klipper
 
-[update_manager mobileraker]
-type = git_repo
-path = ~/mobileraker_companion
-origin = https://github.com/Clon1998/mobileraker_companion.git
-primary_branch = main
-managed_services = mobileraker
-env = ~/mobileraker-env/bin/python
-requirements = scripts/mobileraker-requirements.txt
-install_script = scripts/install-mobileraker-companion.sh
-
 [update_manager sonar]
 type = git_repo
 path = ~/sonar
@@ -65,36 +55,11 @@ primary_branch = main
 managed_services = sonar
 install_script = tools/install.sh
 
-[update_manager fluidd-config]
-type = git_repo
-primary_branch = master
-path = ~/fluidd-config
-origin = https://github.com/fluidd-core/fluidd-config.git
-managed_services = klipper
-
-[update_manager fluidd]
-type = web
-channel = stable
-repo = fluidd-core/fluidd
-path = ~/fluidd
-
-[update_manager moonraker-telegram-bot]
-type = git_repo
-path = ~/moonraker-telegram-bot
-origin = https://github.com/nlef/moonraker-telegram-bot.git
-env = ~/moonraker-telegram-bot-env/bin/python
-requirements = scripts/requirements.txt
-install_script = scripts/install.sh
-
 [update_manager led_effect]
 type = git_repo
 path = ~/klipper-led_effect
 origin = https://github.com/julianschill/klipper-led_effect.git
 is_system_service = False
-
-[spoolman]
-server = http://10.0.1.51:7912
-sync_rate = 5
 
 [update_manager Klipper-Adaptive-Meshing-Purging]
 type = git_repo
